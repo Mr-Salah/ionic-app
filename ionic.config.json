@@ -1,0 +1,7 @@
+{
+  "name": "mit-gestion-utilisateur",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

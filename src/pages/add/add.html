@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Uitisateur
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="btn_logout()" >
+            <ion-icon name="ios-power"></ion-icon>
+          </button>
+    
+    </ion-buttons>  
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding center>
+    
+      
+              
+        <ion-item>
+          <ion-label color="primary" stacked>Name</ion-label>
+          <ion-input type="text" [(ngModel)]="utl.name" name="name" ></ion-input>
+        </ion-item>
+      
+        <ion-item>
+          <ion-label color="primary" stacked>Last Name</ion-label>
+          <ion-input type="text" [(ngModel)]="utl.lastname" name="lastname"  ></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label color="primary" stacked>Email</ion-label>
+          <ion-input type="email" [(ngModel)]="utl.email" name="email"  ></ion-input>
+        </ion-item>
+      
+      
+        <ion-item>
+          <ion-label color="primary" stacked>Biographie</ion-label>
+          <ion-textarea [(ngModel)]="utl.biographie" name="biographie"  ></ion-textarea>
+        </ion-item>
+
+        <ion-item>
+            <ion-label color="primary" stacked>Image</ion-label>
+            <ion-input type="file" (change)="changeListener($event)" ></ion-input>
+        </ion-item>
+
+        <br>
+        <br>
+        <br>
+        
+
+        <ion-grid>
+          <ion-row>
+            <ion-col col-6 offset-4>
+              <button ion-button round outline  (click)="btn_submit()" >Save</button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+
+
+      
+</ion-content>

@@ -1,0 +1,43 @@
+<ion-header class="header">
+  <ion-navbar>
+    <ion-title>
+      Utilisateurs
+    </ion-title>
+    <ion-buttons end>
+        <button ion-button icon-only (click)="btn_logout()" >
+            <ion-icon name="ios-power"></ion-icon>
+          </button>
+    
+    </ion-buttons> 
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding id="list">
+  <ion-card *ngFor="let utl of list_Utls">
+
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="http://127.0.0.1:8000/storage/{{utl.url}}">
+      </ion-avatar>
+      <h2>{{utl.name}}</h2>
+      <p>{{utl.email}}</p>
+    </ion-item>
+  
+    <ion-card-content>
+      <p>{{utl.biographie}}</p>
+    </ion-card-content>
+  
+    <ion-row center text-center>
+      <ion-col>
+        <button ion-button  color="secondary" clear (click)="btn_update(utl.id)" >Update</button>
+      </ion-col>
+      <ion-col>
+        <button ion-button color="danger" clear (click)="btn_delete(utl.id)">delete</button>
+      </ion-col>
+    </ion-row>
+  
+  </ion-card>
+
+  
+  <ion-img width="100" height="100" src="../../assets/imgs/empty.png" *ngIf="empty" id="img-empty"></ion-img>
+</ion-content>

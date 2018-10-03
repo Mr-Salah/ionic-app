@@ -1,0 +1,23 @@
+page-welcome {
+
+    #welcome{
+        background: color($colors,energy);
+
+        h1 {
+            margin-top: 55%;
+            margin-left: 20%;
+            font-size: 36pt;
+            font-weight: 100;
+        }
+        p{
+            margin-left: 35%;
+        }
+        #btn-login {
+            margin-top: 55%;
+            margin-left: 35%;
+            border-color: black;
+            border-width: 2px;
+            color: black;
+        }
+    }
+}

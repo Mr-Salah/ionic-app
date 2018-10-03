@@ -1,0 +1,96 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Modifier  
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding center>
+  <form #form="ngForm"  novalidate>
+    
+            
+      <ion-item>
+        <ion-label color="primary" stacked>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="utl.name" name="name" ngControl="name" ></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label color="primary" stacked>Last Name</ion-label>
+        <ion-input type="text" [(ngModel)]="utl.lastname" name="lastname" ngControl="lastname" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="primary" stacked>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="utl.email" name="email" ngControl="email" ></ion-input>
+      </ion-item>
+    
+    
+      <ion-item>
+        <ion-label color="primary" stacked>Biographie</ion-label>
+        <ion-textarea [(ngModel)]="utl.biographie" name="biographie" ngControl="biographie" ></ion-textarea>
+      </ion-item>
+
+      <ion-item>
+          <ion-label color="primary" stacked>Image</ion-label>
+          <ion-input type="file" (change)="changeListener($event)" ></ion-input>
+      </ion-item>
+
+      <br>
+      <br>
+      <br>
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-4>
+            <button ion-button round outline (click)="btn_Update()">Update</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      
+    
+  </form>
+</ion-content>
+
+<!-- <ion-content padding color='secondary'>
+      <ion-item >
+        <ion-label color="secondary" stacked>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="utl.name"  ></ion-input>
+      </ion-item>
+    
+      <ion-item >
+        <ion-label color="secondary" stacked>Last Name</ion-label>
+        <ion-input type="text" [(ngModel)]="utl.lastname" ></ion-input>
+      </ion-item>
+
+      <ion-item >
+        <ion-label color="secondary" stacked>Email</ion-label>
+        <ion-input type="email" [(ngModel)]="utl.email"  ></ion-input>
+      </ion-item>
+    
+    
+      <ion-item >
+        <ion-label color="secondary" stacked>Biographie</ion-label>
+        <ion-textarea [(ngModel)]="utl.biographie"  ></ion-textarea>
+      </ion-item>
+
+      <ion-item >
+          <ion-label color="secondary" stacked>Image</ion-label>
+          <ion-input type="file" (change)="changeListener($event)" ></ion-input>
+      </ion-item>
+
+      <br>
+      <br>
+      <br>
+      
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6 offset-4>
+            <button ion-button round outline (click)="btn_save()">Save</button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+        
+    
+</ion-content> -->
